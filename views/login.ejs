@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/css/login.css" />
+    <title>Twitter</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="box">
+        <div class="content">
+          <div id="cancel"><a href="landing">X</a></div>
+          <div class="text">
+            <h2>Sign in to Twitter</h2>
+            
+            <form action="/login" class="signinnamephone" method="POST">
+              <input
+                type="text"
+                class="alternate"
+                placeholder="Email or username"
+                name="loginUsername"
+              />
+              <input
+                type="text"
+                class="alternate"
+                placeholder="Password"
+                name="loginPassword"
+              />
+
+              <input type="submit" class="next btn" value="Sign In" />
+            </form>
+
+            <p class="error"><%= locals.errorMessage %></p>
+            <p class="success"><%= locals.successMessage %></p>
+            <h3 class="signup">
+              Don't have an Account? <a href="/register">Sign Up</a>
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
